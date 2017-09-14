@@ -20,6 +20,7 @@ module.exports = {
   updateNotification: NotificationApi.updateNotification,
   getNotification: NotificationApi.getNotification,
   getUserNotifications: NotificationApi.getUserNotifications,
+  getUnsentNotifications: NotificationApi.getUnsentNotifications,
 
   addTagToUser: TagApi.addTagToUser,
   getTag: TagApi.getTag,

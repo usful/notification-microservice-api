@@ -16,7 +16,10 @@ module.exports = function() {
     getNotification: async ({ notificationId }) => {
       return await command({ uri: `${partialUri}/${notificationId}`, method: 'GET' });
     },
-    getUserNotifications: async ({userId, limit = 10}) => {
+    getUserNotifications: async ({userId, limit}) => {
+      return await command({ uri: `${partialUri}/sent`, body: {userId, limit}, method:'GET'});
+    },
+    getUnsentNotifications: async ({userId, limit}) => {
       return await command({ uri: `${partialUri}/sent`, body: {userId, limit}, method:'GET'});
     }
   };
