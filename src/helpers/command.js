@@ -6,9 +6,9 @@ module.exports = async function command({ uri, body, method }) {
     method,
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
-    resolveWithFullResponse: true,
+    resolveWithFullResponse: true
   };
 
   if (body) {
@@ -18,14 +18,10 @@ module.exports = async function command({ uri, body, method }) {
   let response;
   let data;
 
-  try {
-    response = await request(opts);
-    response = await response.toJSON();
+  response = await request(opts);
+  response = await response.toJSON();
 
-    data = await JSON.parse(response.body).data;
-  } catch (error) {
-    console.error('request faield', error);
-  }
+  data = await JSON.parse(response.body).data;
 
   return { response, data };
 };
