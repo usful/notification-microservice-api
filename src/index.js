@@ -1,8 +1,7 @@
 import api from './api';
-import { setConfig } from './config';
+import { set as setConfig } from './config';
 
-export default class NotificationService {
-
+export class NotificationService {
   constructor(config) {
     if (config) {
       setConfig(config);
