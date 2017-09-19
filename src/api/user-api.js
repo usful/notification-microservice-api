@@ -1,9 +1,9 @@
-const command = require('../helpers/command');
-const { config } = require('../config');
+import command from '../helpers/command';
+import { config } from '../config';
 
 const partialUri = `${config.API_PREFIX}/user`;
 
-module.exports = {
+export default {
   createUser: async ({ user }) => {
     return await command({ uri: partialUri, body: user, method: 'POST' });
   },

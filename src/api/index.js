@@ -1,11 +1,11 @@
-const UserApi = require('./user-api');
-const GroupApi = require('./group-api');
-const NotificationApi = require('./notification-api');
-const TemplateApi = require('./template-api');
-const TagApi = require('./tag-api');
-const WebHookApi = require('./webhook-api');
+import UserApi from './user-api';
+import GroupApi from './group-api';
+import NotificationApi from './notification-api';
+import TemplateApi from './template-api';
+import TagApi from './tag-api';
+import WebHookApi from './webhook-api';
 
-module.exports = {
+export default {
   createUser: UserApi.createUser,
   updateUser: UserApi.updateUser,
   getUser: UserApi.getUser,

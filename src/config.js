@@ -10,7 +10,7 @@ function set(newConfig) {
   CONFIG = newConfig;
 }
 
-module.exports = {
+export default {
   config: CONFIG,
-  set
+  setConfig: set
 };

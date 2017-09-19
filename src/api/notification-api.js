@@ -1,9 +1,9 @@
-const command = require('../helpers/command');
-const { config } = require('../config');
+import command from '../helpers/command';
+import { config } from '../config';
 
 const partialUri = `${config.API_PREFIX}/notification`;
 
-module.exports = {
+export default {
   createNotification: async ({ notification }) => {
     return await command({
       uri: partialUri,

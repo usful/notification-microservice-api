@@ -1,14 +1,12 @@
-const api = require('./api');
-const { set } = require('./config');
+import api from './api';
+import { setConfig } from './config';
 
-class NotificationService {
+export default class NotificationService {
 
   constructor(config) {
     if (config) {
-      set(config);
+      setConfig(config);
     }
     return api
   }
 }
-
-module.exports = NotificationService;

@@ -1,9 +1,9 @@
-const command = require('../helpers/command');
-const { config } = require('../config');
+import command from '../helpers/command';
+import { config } from '../config';
 
 const partialUri = `${config.API_PREFIX}/webhook`;
 
-module.exports = {
+export default {
   addWebHook: async ({ webhook }) => {
     return await command({ uri: partialUri, body: webhook, method: 'POST' });
   },
