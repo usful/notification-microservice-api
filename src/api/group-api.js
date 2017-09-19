@@ -5,13 +5,12 @@ export default {
   addUserToGroup: async ({ userId, group }) =>
     await command({
       uri: `${config.API_PREFIX}group/${userId}/${group}`,
-      method: 'POST'
+      method: 'POST',
     }),
-  getGroup: async ({ group }) =>
-    await command({ uri: `${config.API_PREFIX}group/${group}`, method: 'GET' }),
+  getGroup: async ({ group }) => await command({ uri: `${config.API_PREFIX}group/${group}`, method: 'GET' }),
   removeUserFromGroup: async ({ userId, group }) =>
     await command({
       uri: `${config.API_PREFIX}group/${userId}/${group}`,
-      method: 'DELETE'
-    })
+      method: 'DELETE',
+    }),
 };

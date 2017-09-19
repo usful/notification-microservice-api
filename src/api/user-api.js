@@ -9,7 +9,7 @@ export default {
     return await command({
       uri: `${config.API_PREFIX}/user/${userId}`,
       body: update,
-      method: 'PUT'
+      method: 'PUT',
     });
   },
   getUser: async ({ userId }) => {
@@ -17,5 +17,5 @@ export default {
   },
   deleteUser: async ({ userId }) => {
     return await command({ uri: `${config.API_PREFIX}/user/${userId}`, method: 'DELETE' });
-  }
+  },
 };
