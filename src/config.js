@@ -1,5 +1,5 @@
 const BASE_URL = 'http://localhost:8080/';
-const API_PREFIX = `${BASE_URL}api/`;
+const API_PREFIX = `${BASE_URL}api`;
 
 let CONFIG = {
   BASE_URL,
