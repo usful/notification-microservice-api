@@ -1,6 +1,6 @@
 {
   "name": "notification-microservice-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Api library for interfacing with the notification microservice",
   "main": "src/index.js",
   "dependencies": {
