@@ -7,7 +7,7 @@ class NotificationService {
     if (config) {
       set(config);
     }
-    return { api }
+    return api
   }
 }
 
