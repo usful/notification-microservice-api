@@ -6738,7 +6738,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var BASE_URL = 'http://localhost:8080/';
-var API_PREFIX = BASE_URL + 'api/';
+var API_PREFIX = BASE_URL + 'api';
 
 var CONFIG = {
   BASE_URL: BASE_URL,
@@ -6805,7 +6805,6 @@ exports.default = function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log(uri);
             opts = {
               uri: uri,
               method: method,
@@ -6823,24 +6822,24 @@ exports.default = function () {
 
             response = void 0;
             data = void 0;
-            _context.next = 7;
+            _context.next = 6;
             return (0, _requestPromise2.default)(opts);
 
-          case 7:
+          case 6:
             response = _context.sent;
-            _context.next = 10;
+            _context.next = 9;
             return response.toJSON();
 
-          case 10:
+          case 9:
             response = _context.sent;
-            _context.next = 13;
+            _context.next = 12;
             return JSON.parse(response.body).data;
 
-          case 13:
+          case 12:
             data = _context.sent;
             return _context.abrupt('return', { response: response, data: data });
 
-          case 15:
+          case 14:
           case 'end':
             return _context.stop();
         }
