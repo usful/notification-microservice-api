@@ -1,6 +1,6 @@
-const request = require('request-promise');
+import request from 'request-promise';
 
-module.exports = async function command({ uri, body, method }) {
+export default async function command({ uri, body, method }) {
   const opts = {
     uri,
     method,

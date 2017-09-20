@@ -1,15 +1,14 @@
-const command = require('../helpers/command');
-const { config } = require('../config');
-const partialUri = `${config.API_PREFIX}/tag`;
+import command from '../helpers/command';
+import config from '../config';
 
-module.exports = {
+export default {
   addTagToUser: async ({ userId, tag }) => {
-    return await command({ uri: `${partialUri}/${userId}/${tag}`, method: 'POST' });
+    return await command({ uri: `${config.API_PREFIX}/tag/${userId}/${tag}`, method: 'POST' });
   },
   getTag: async ({ tag }) => {
-    return await command({ uri: `${partialUri}/${tag}`, method: 'GET' });
+    return await command({ uri: `${config.API_PREFIX}/tag/${tag}`, method: 'GET' });
   },
   removeTagFromUser: async ({ userId, tag }) => {
-    return await command({ uri: `${partialUri}/${userId}/${tag}`, method: 'DELETE' });
+    return await command({ uri: `${config.API_PREFIX}/tag/${userId}/${tag}`, method: 'DELETE' });
   },
 };

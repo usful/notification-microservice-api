@@ -1,19 +1,16 @@
-const command = require('../helpers/command');
-const { config } = require('../config');
+import command from '../helpers/command';
+import config from '../config';
 
-const partialUri = `${config.API_PREFIX}group`;
-
-module.exports = {
+export default {
   addUserToGroup: async ({ userId, group }) =>
     await command({
-      uri: `${partialUri}/${userId}/${group}`,
-      method: 'POST'
+      uri: `${config.API_PREFIX}group/${userId}/${group}`,
+      method: 'POST',
     }),
-  getGroup: async ({ group }) =>
-    await command({ uri: `${partialUri}/${group}`, method: 'GET' }),
+  getGroup: async ({ group }) => await command({ uri: `${config.API_PREFIX}group/${group}`, method: 'GET' }),
   removeUserFromGroup: async ({ userId, group }) =>
     await command({
-      uri: `${partialUri}/${userId}/${group}`,
-      method: 'DELETE'
-    })
+      uri: `${config.API_PREFIX}group/${userId}/${group}`,
+      method: 'DELETE',
+    }),
 };
