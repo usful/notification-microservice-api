@@ -43553,7 +43553,7 @@ exports.default = {
             case 0:
               _context.next = 2;
               return (0, _command2.default)({
-                uri: _config2.default.API_PREFIX + 'group/' + userId + '/' + group,
+                uri: _config2.default.API_PREFIX + '/group/' + userId + '/' + group,
                 method: 'POST'
               });
 
@@ -43580,7 +43580,7 @@ exports.default = {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return (0, _command2.default)({ uri: _config2.default.API_PREFIX + 'group/' + group, method: 'GET' });
+              return (0, _command2.default)({ uri: _config2.default.API_PREFIX + '/group/' + group, method: 'GET' });
 
             case 2:
               return _context2.abrupt('return', _context2.sent);
@@ -43607,7 +43607,7 @@ exports.default = {
             case 0:
               _context3.next = 2;
               return (0, _command2.default)({
-                uri: _config2.default.API_PREFIX + 'group/' + userId + '/' + group,
+                uri: _config2.default.API_PREFIX + '/group/' + userId + '/' + group,
                 method: 'DELETE'
               });
 
