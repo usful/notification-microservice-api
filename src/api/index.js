@@ -10,10 +10,13 @@ export default {
   updateUser: UserApi.updateUser,
   getUser: UserApi.getUser,
   deleteUser: UserApi.deleteUser,
+  addUserToGroup: UserApi.addUserToGroup,
+  removeUserFromGroup: UserApi.removeUserFromGroup,
+  addTagToUser: UserApi.addTagToUser,
+  removeTagFromUser: UserApi.removeTagFromUser,
 
-  addUserToGroup: GroupApi.addUserToGroup,
+  deleteGroup: GroupApi.deleteGroup,
   getGroup: GroupApi.getGroup,
-  removeUserFromGroup: GroupApi.removeUserFromGroup,
 
   createNotification: NotificationApi.createNotification,
   removeNotification: NotificationApi.removeNotification,
@@ -22,9 +25,8 @@ export default {
   getUserNotifications: NotificationApi.getUserNotifications,
   getUnsentNotifications: NotificationApi.getUnsentNotifications,
 
-  addTagToUser: TagApi.addTagToUser,
+  deleteTag: TagApi.deleteTag,
   getTag: TagApi.getTag,
-  removeTagFromUser: TagApi.removeTagFromUser,
 
   createTemplate: TemplateApi.createTemplate,
   updateTemplate: TemplateApi.updateTemplate,
